@@ -10,7 +10,7 @@ using namespace std;
 // Fill in the function below to return the largest divisor of a number
 // input: number, for example 12
 // returns: largest value than can divide input without remainder
-//      example, for 12, divisors are 1, 2, 3, 4, 6, 12
+//      example, for 12, divisors are 1, 2, 3, 4, 6, 
 //             so the result is 6
 //             if there is no valid divisor for the value greater than 1, return 0
 int findDivisor(int number) {
@@ -24,6 +24,10 @@ int findDivisor(int number) {
 int factorial(int number) {
   return 0;
 }
+
+
+
+
 
 
 TEST_CASE( "1: divisor of 1 or less", "[multi-file:1]") {

@@ -28,3 +28,6 @@
 
 
 // Task 3 call the functions in main() below:
+int main() {
+    return 0;
+}
