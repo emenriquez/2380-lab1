@@ -1,6 +1,5 @@
 # Lab 1 Codespaces Test: C++
 1. Complete the exercises in lab1.cpp (function definitions - no main() function should be written).
-2. Complete the exercises in ioTest.cpp, and call your functions in main() in this file
 
 
 ### Setup command
