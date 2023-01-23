@@ -7,20 +7,18 @@
 using namespace std;
 
 // ******** TASK 1 ******** 
-// Fill in the function below to return the largest divisor of a number
-// input: number, for example 12
-// returns: largest value than can divide input without remainder
-//      example, for 12, divisors are 1, 2, 3, 4, 6, 
-//             so the result is 6
-//             if there is no valid divisor for the value greater than 1, return 0
-int findDivisor(int number) {
-  return 0;
+// Fill in the function below to return the string "Correct Answer!"
+// input: any integer value, for example 12
+// returns: the string "Correct Answer!"
+string testFunc(int number) {
+  return "Wrong! Need to fix this.";
 }
 
 // ******** TASK 2 ******** 
 // Fill in the function below to calculate the factorial of an input number
 // input: integer value, example: 4
 // returns: integer - factorial of input value, example: 4*3*2*1 = 24
+// Be sure to handle any errors in case you get an input such as zero or a negative value!
 int factorial(int number) {
   return 0;
 }
@@ -30,24 +28,17 @@ int factorial(int number) {
 
 
 
-TEST_CASE( "1: divisor of 1 or less", "[multi-file:1]") {
-  REQUIRE(findDivisor(0) == 0);
-  REQUIRE(findDivisor(1) == 0);
+TEST_CASE("testFunc") {
+  REQUIRE(testFunc(-3) == "Correct Answer!");
+  REQUIRE(testFunc(10) == "Correct Answer!");
 }
 
-TEST_CASE( "1: divisors of higher values", "[multi-file:1]") {
-  REQUIRE(findDivisor(10) == 5);
-  REQUIRE(findDivisor(2045) == 409);
-  REQUIRE(findDivisor(10007) == 0);
+TEST_CASE("factorial") {
+  CHECK_NOTHROW(factorial(5));
+  CHECK_NOTHROW(factorial(1));
 }
 
-TEST_CASE( "2: Factorial of 0", "[multi-file:2]" ) {
-    REQUIRE( factorial(0) == 1 );
-}
-
-TEST_CASE( "2: Factorials of 1 and higher are computed", "[multi-file:2]" ) {
-    REQUIRE( factorial(1) == 1 );
-    REQUIRE( factorial(2) == 2 );
-    REQUIRE( factorial(3) == 6 );
-    REQUIRE( factorial(10) == 3628800 );
+TEST_CASE("Error Handling") {
+  CHECK_NOTHROW(factorial(0));
+  CHECK_NOTHROW(factorial(-6));
 }
